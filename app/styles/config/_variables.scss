@@ -1,0 +1,48 @@
+// Our variables
+$base-font-sans: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$base-font-serif: Georgia, Times, 'Times New Roman', serif;
+$base-font-folha: 'FolhaII-heavy', Georgia, serif;
+$base-font-size: 18px;
+$base-line-height: 22px;
+$base-font-weight: 400;
+
+// CORES
+$base-color-gray: rgb(68, 68, 68); // Cinza (legendas)
+
+// Mixin Media Query
+@mixin media($queryString){
+    @media screen and (max-width: #{$queryString}) {
+      @content;
+    }
+}
+
+// FONT SIZES
+// 100 - Thin
+// 200 - Extra Light (Ultra Light)
+// 300 - Light
+// 400 - Normal
+// 500 - Medium
+// 600 - Semi Bold (Demi Bold)
+// 700 - Bold
+// 800 - Extra Bold (Ultra Bold)
+// 900 - Black (Heavy)
+
+@mixin font($font-face: $base-font-serif, $font-weight: $base-font-weight, $font-size: null, $line-height: null) {
+	font-family: $font-face;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}

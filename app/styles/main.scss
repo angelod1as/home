@@ -1,0 +1,29 @@
+/**!
+ *	TEMPLATE
+ *	Template HTML para páginas e artes de iframe
+ *
+ *	EDITAR CSS SEM SASS
+ *
+ *	no sublime, CMD + F
+ *	procure a frase
+ *	EDITE DAQUI PARA BAIXO
+ *	e daí... edite
+ *
+ *
+ *
+ *
+ */
+
+
+// vars
+@import "config/variables";
+
+// base
+@import "base/reset";
+@import "base/flexboxgrid";
+@import "base/base";
+
+//Layout
+@import "layout/galeria";
+@import "layout/layout";
+@import "layout/cassete";

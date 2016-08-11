@@ -1,0 +1,200 @@
+$font-color: white;
+$content-width: 620px;
+$photo-offset: -200px;
+
+
+@mixin fita-img ($front,$left,$back){
+  .front { background-image: url($front); }
+  .left {background-image: url($left); }
+  .back {background-image: url($back); }
+}
+
+#video-container {
+  width:100%;
+  height:calc(80vh - 84px);
+  position:relative;
+  display:block;
+  overflow:hidden;
+  background-image: url('../images/fundo.jpg');
+  background-position: center center;
+  background-size: cover;
+  // tirando margin flexboxgrid vídeo
+  margin:0;
+}
+
+#video-head{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-size: cover;
+    object-fit: cover; /*cover video background */
+    z-index: 1;
+    opacity: 1;
+}
+ 
+#titulo {
+  color: $font-color;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 30%;
+  z-index:2;
+}
+
+#spotify {
+  display:none;
+  position:fixed;
+  z-index:5;
+  float:left;
+  left:30px;
+  bottom: 30px;
+  #spotify-caption {
+
+    background-color:white;
+    padding-top:1px;
+    font-size:0.9em;
+    line-height:2em;
+    color:#888888;
+  }
+  iframe {
+    width:300px;
+    height:580px;
+  }
+  @include media(1350px) {
+    left:10px;
+    bottom:10px;
+    #spotify-caption {
+      font-size:0.8em;
+    }
+    iframe {
+      width:250px;
+    }
+  }
+  @include media(1175px) {
+    left:-1px;
+    bottom:-4px;
+    #spotify-caption{
+      border: 1px solid #a0a0a0;
+      width: 150px;
+      padding:5px 0 5px 5px;
+      line-height:1em;
+    }
+    iframe {
+      width:100vw;
+      height:80px;
+    }
+  }
+}
+
+.photo {
+  display:block;
+  position:relative;
+  width:600px;
+  &.dir{
+    float:right;
+    margin-right:$photo-offset;
+    text-align:right;
+  }
+  &.esq{
+    float:left;
+    margin-left:$photo-offset;
+    text-align:left;
+  }
+  img {
+    width: 100%;
+  }
+  .credf{
+    padding-top: 0;
+  }
+}
+
+#linha-fina{
+  padding-top: 20px;
+  p.lead {
+    text-align: center;
+  }
+}
+
+.content {
+  padding: 0 10px;
+  max-width:$content-width;
+  margin: 30px auto;
+}
+
+#galeria {
+  padding:30px 0 30px 0;
+  figcaption {
+    color:black;
+    width:90%;
+  }
+}
+
+#fita-frame {
+  margin: 50px auto;
+  height:350px;
+}
+
+.fita {
+  &.f-metallica {
+    @include fita-img(
+      "../images/f-metallica-ladoa.png",
+      "../images/f-metallica-lat.png",
+      "../images/f-metallica-ladob.png"
+      )
+  }
+  &.f-artista {
+    @include fita-img(
+      "../images/f-artista-ladoa.png",
+      "../images/f-artista-lat.png",
+      "../images/f-artista-ladob.png"
+      )
+  }
+  &.f-raul{
+    @include fita-img(
+      "../images/f-raul-ladoa.png",
+      "../images/f-raul-lat.png",
+      "../images/f-raul-ladob.png"
+      )
+  }
+}
+
+.videoWrapper {
+  margin: 40px 0 0 0;
+}
+
+// Título maior no desktop (para não sobrescrever mobile)
+@media screen and (min-width: $bp-md ){
+  h1 {
+    @include font($base-font-folha);
+    font-size: 5em;
+  }
+}
+
+@media screen and (max-width: $bp-md){
+  #fita-frame {
+    margin: 20px auto;
+    height:250px;
+  }
+  #titulo {
+    top:15px;
+  }
+}
+
+@media screen and (max-width: $content-width + 200px) {
+  .photo {
+    width:100%;
+    &.dir {
+      float:none;
+      margin:0;
+    }
+    &.esq{
+      float:none;
+      margin:0;
+    }
+  }
+}

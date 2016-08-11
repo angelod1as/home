@@ -1,2 +1,1 @@
-# home
-New homepage project
+gulp-template
