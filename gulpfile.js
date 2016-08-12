@@ -69,6 +69,7 @@ gulp.task('html', ['styles', 'scripts'], (run) => {
   pump ([
     gulp.src('app/*.html'),
     $.useref({searchPath: ['.tmp', 'app', '.']}),
+    $.if('*.html', $.htmlmin({collapseWhitespace: true})),
     $.if('*.js', $.uglify()),
     $.if('*.css', $.cssnano({safe: true, autoprefixer: false})),
     gulp.dest('dist')
@@ -76,9 +77,6 @@ gulp.task('html', ['styles', 'scripts'], (run) => {
     run
   );
 });
-
-// add acima para minificar HTML
-// .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
 
 gulp.task('images', (run) => {
   pump ([
