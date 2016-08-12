@@ -1,13 +1,18 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:700,400);
+
 // Our variables
-$base-font-sans: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-$base-font-serif: Georgia, Times, 'Times New Roman', serif;
-$base-font-folha: 'FolhaII-heavy', Georgia, serif;
-$base-font-size: 18px;
-$base-line-height: 22px;
-$base-font-weight: 400;
+$sans: 'Montserrat', sans-serif;
+$serif: 'Roboto Slab', serif;
+$font-size: 18px;
+$line-height: 22px;
+$font-weight: 400;
 
 // CORES
-$base-color-gray: rgb(68, 68, 68); // Cinza (legendas)
+$gray: rgb(68, 68, 68); // Cinza (legendas)
+$black: #000;
+$white: #FFF;
+$color:#ffa500;
 
 // Mixin Media Query
 @mixin media($queryString){
@@ -27,7 +32,8 @@ $base-color-gray: rgb(68, 68, 68); // Cinza (legendas)
 // 800 - Extra Bold (Ultra Bold)
 // 900 - Black (Heavy)
 
-@mixin font($font-face: $base-font-serif, $font-weight: $base-font-weight, $font-size: null, $line-height: null) {
+// use with @include
+@mixin font($font-face: $serif, $font-weight: $font-weight, $font-size: null, $line-height: null) {
 	font-family: $font-face;
 	font-weight: $font-weight;
 	font-size: $font-size;

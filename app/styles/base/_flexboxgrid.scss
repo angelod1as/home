@@ -1,3 +1,10 @@
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display:block;
+}
+
+
 //
 // -- Start editing -- //
 //
@@ -18,15 +25,15 @@ $outer-margin: 2rem !default;
 // lg 945px
 
 // breakpoints para layout
-$bp-sm: 16.667em;
-$bp-md: 33.333em;
-$bp-lg: 52.5em;
+$bp-sm: 48em;
+$bp-md: 64em;
+$bp-lg: 80em;
 
 // Breakpoints para flexboxgrid
 $breakpoints:
-  sm 16.667em 16.667rem,
-  md 33.333em 33.333rem,
-  lg 52.5em 52.5rem !default;
+  sm 48em 48rem,
+  md 64em 64rem,
+  lg 80em 80rem !default;
 $flexboxgrid-max-width: 1200px !default;
 
 //
