@@ -44,6 +44,7 @@
     }
   },
   "dependencies": {
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "push-dir": "^0.4.1"
   }
 }
