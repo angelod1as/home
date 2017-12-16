@@ -72,7 +72,7 @@ gulp.task('html', ['styles', 'scripts'], (run) => {
     $.if('*.html', $.htmlmin({collapseWhitespace: true})),
     $.if('*.js', $.uglify()),
     $.if('*.css', $.cssnano({safe: true, autoprefixer: false})),
-    gulp.dest('dist')
+    gulp.dest('docs')
     ],
     run
   );
@@ -88,7 +88,7 @@ gulp.task('images', (run) => {
       // as hooks for embedding and styling
       svgoPlugins: [{cleanupIDs: false}]
     })),
-    gulp.dest('dist/images')
+    gulp.dest('docs/images')
     ],
     run
   );
@@ -98,7 +98,7 @@ gulp.task('fonts', (run) => {
   pump ([
     gulp.src('app/fonts/**/*'),
     gulp.dest('.tmp/fonts'),
-    gulp.dest('dist/fonts'),
+    gulp.dest('docs/fonts'),
     ],
   run
   );
@@ -112,7 +112,7 @@ gulp.task('extras', (run) => {
       ], {
         dot: true
       }),
-    gulp.dest('dist')
+    gulp.dest('docs')
     ],
   run
   );
@@ -121,13 +121,13 @@ gulp.task('extras', (run) => {
 gulp.task('other', (run) => {
   pump([
     gulp.src('app/other/**/*.*'),
-    gulp.dest('dist/other/')
+    gulp.dest('docs/other/')
     ],
     run
   );
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', 'docs']));
 
 gulp.task('serve', ['styles', 'scripts', 'fonts', 'other'], () => {
   browserSync({
@@ -151,12 +151,12 @@ gulp.task('serve', ['styles', 'scripts', 'fonts', 'other'], () => {
 
 
 
-gulp.task('serve:dist', () => {
+gulp.task('serve:docs', () => {
   browserSync({
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['dist']
+      baseDir: ['docs']
     }
   });
 });
@@ -181,7 +181,7 @@ gulp.task('serve:test', ['scripts'], () => {
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'other'], (run) => {
   pump ([
-    gulp.src('dist/**/*'),
+    gulp.src('docs/**/*'),
     $.size({title: 'build', gzip: true})
     ],
     run
