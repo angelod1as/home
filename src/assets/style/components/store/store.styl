@@ -1,0 +1,86 @@
+$btn-height = 50px
+
+#store
+	.centered
+		margin: 0 auto
+		max-width: 750px
+		&.title
+			margin: 50px auto
+	.products
+		font-family: $f-sans
+		margin-top: 120px
+		.products-grid
+			display: grid
+			grid-column-gap: 50px
+			grid-row-gap: 50px
+			grid-template-columns: repeat(auto-fit, minmax(150px, 300px))
+			justify-content: center
+			.product
+				border-radius: 5px
+				.product-img
+					width: 100%
+					dropshadow(light)
+				.product-info
+					margin-top: 15px
+					display: grid
+					grid-template-columns: 3fr 1fr
+					grid-gap: 15px
+					.product-price
+						font-weight: $f-medium
+						font-size: 1.5em
+						align-self: start
+						justify-self: end
+						position: relative
+						.currency
+							font-size: .5em
+				.product-option
+					label
+						&:last-child
+							margin-left: 10px
+				button
+					height: 50px
+					margin-top: 25px
+					svg
+						fill: $color
+				.collapsable+button
+					margin-top: 10px
+
+.cart-btn
+	background-color: $color
+	position: fixed
+	bottom: 0
+	left: 0
+	border-radius: 0
+	height: $btn-height
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	z-index: 10
+	dropshadow(up)
+	transition: .1s
+	&:hover
+		transform: scale(1.1)
+	.cart-inner
+		font-weight: $f-medium
+		font-family: $f-sans
+		color: $white
+		margin: 10px auto 0
+		line-height: 24px
+		text-transform: uppercase
+	.svg
+		display: inline-block
+		line-height: 24px
+		vertical-align: middle;
+	svg
+		margin-right: 10px
+		fill: $white
+
+#store + #footer
+	margin-bottom: $btn-height
+
+.collapsable
+	.info-ed
+		font-size: .9em
+	.info-tech
+		font-size: .8em

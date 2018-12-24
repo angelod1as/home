@@ -1,0 +1,51 @@
+$bp = 500px
+.face-card
+	display: flex
+	margin: 50px 0 20px
+	+below($bp)
+		display: block
+		margin: 50px 0 40px
+	.left
+		$photo-size = 150px
+		width: $photo-size
+		margin-right: 20px
+		position: relative
+		border-radius: 50%
+		+below($bp)
+			margin: 0 auto 20px
+		.photo
+			height: auto
+			max-width: $photo-size
+			z-index: 1
+			border-radius: 50%
+		.background-color
+			background-color: $color
+			width: $photo-size
+			height: $photo-size
+			position: absolute
+			top: 0
+			left: 0
+			z-index: -1
+			border-radius: 50%
+	.right
+		width: 100%
+		justify-content: center
+		display: flex
+		flex-direction: column
+		p
+			margin: 2px 0 6px 0
+		.social
+			display: flex
+			+below($bp)
+				justify-content: center
+			.img_social
+				width: auto
+				height: 17px
+			a
+				&:not(:first-child)
+					margin-left: 5px
+				&:hover
+					opacity: .5
+		h3,	p
+			+below($bp)
+				text-align: center

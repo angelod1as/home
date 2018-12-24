@@ -1,0 +1,75 @@
+$bp = 700px
+
+#old-download
+	.year
+		margin: 0 auto
+		max-width: $container
+		display: flex
+		position: relative
+
+		.panel
+		.eds
+			width: 50%
+			+below($bp)
+				width: 100%
+
+		.panel
+			color: $white
+			background-color: $color
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+			+below($bp)
+				padding: 50px 0
+			h3
+				font-weight: 300
+				color: $white
+				span
+					font-size: 2em
+					line-height: 1.1em
+					font-weight: 700
+					font-variant: small-caps
+					display: block
+			button
+				cursor: pointer
+				width: 200px
+				font-family: $f-sans
+				font-weight: $f-regular
+				padding: 10px 20px
+
+		.eds
+			background-color: $darker
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			justify-items: center
+			align-content: center
+			img
+				border-radius: 50%
+				background-color: $white
+				border: 1px solid darken($white, 50%)
+			p
+				color: $white
+				text-align: center
+				margin: 10px 0 0 0
+				font-size: .8em
+				line-height: 1em
+				font-family: $f-sans
+				font-weight: $f-regular
+			button
+				margin: 10px 0
+				width: auto
+				border-radius: 0
+				background-color: transparent
+				+below($bp)
+					padding: 5px 10px
+
+				&:hover
+					opacity .7
+
+	+below($bp)
+		.first
+			flex-direction: column
+		.second
+			flex-direction: column-reverse

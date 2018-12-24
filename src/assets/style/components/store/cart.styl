@@ -1,0 +1,64 @@
+#cart
+	margin-bottom: 200px
+	.cart-list
+		margin: 50px 0
+	p
+		padding: 0
+		margin: 0
+	.list-header
+	.list-product
+		display: grid
+		grid-template-columns: 50px 1fr 60px 50px 60px 30px
+		grid-gap: 20px
+		align-items: center
+		:nth-last-child(1)
+		:nth-last-child(2)
+			text-align: right
+
+	.list-header
+		p
+			font-weight: $f-heavy
+			font-family: $f-sans
+
+	.list-product
+		border-top: 1px solid $color
+		padding: 30px 0
+		img
+			max-width: 100%
+		.qtd
+			border: 1px solid rgba(0, 0, 0, .2)
+			border-radius: 5px
+			padding: 3px 5px
+			max-width: 50px
+		.remove
+			width: 25px
+			height: 25px
+			margin: 0
+			padding: 0
+			border-radius: 50%
+			position relative
+			&:before
+				content:'\00d7'
+				position: absolute
+				top: 12px
+				left: 6px
+				line-height: 0
+				color: $color
+
+	.list-total
+		margin-top: 20px
+		p
+			font-family: $f-sans
+			font-weight: $f-medium
+			font-size: 1.3em
+			text-align: right
+		.general-total
+			font-weight: $f-heavy
+			font-size: 1.2em
+			color: $color
+
+	.cart-buttons
+		.lower
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-gap: 10px

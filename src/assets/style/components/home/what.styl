@@ -1,0 +1,36 @@
+$bp = 500px
+#what
+	set(center)
+	display: flex
+	justify-content: space-between
+	.main
+		width: calc(65% - 10px)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	.aside
+		position relative
+		width: calc(35% - 10px)
+		img
+			max-width: 100%
+			height: auto
+			background-color: $color
+	.main
+		h2
+			margin-top: 0
+
++below(600px)
+	#what
+		display: block
+		width: 100%
+		.aside
+			margin: 0 auto
+			width: 250px
+			margin-bottom: 40px
+			+below($bp)
+				margin: 0 auto
+		.main
+			margin: 0 10px
+			display: block
+			width: auto
+

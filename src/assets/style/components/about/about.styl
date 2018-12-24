@@ -1,0 +1,45 @@
+$bp = 500px
+#about
+	h2
+		margin-top: 50px
+
+	figure
+		img
+			dropshadow(light)
+
+	figure
+		margin: 50px auto
+		figcaption
+			text-align: center
+			font-weight: $f-light
+			font-style: italic
+			margin-top: 10px
+		&.three-mez
+			width: 100%
+			.first
+				width: 100%
+				img
+					margin: 0 auto
+					width: 40%
+					+below($bp)
+						width: 100%
+			.second
+				img
+					max-width: 50%
+					height: auto
+					display: inline-block
+					+below($bp)
+						display: block
+						max-width: 100%
+		&.one-tf
+			img
+				width: 70%
+				margin: 0 auto
+				+below($bp)
+					width: 100%
+		&.one-poster
+			img
+				width: 50%
+				margin: 0 auto
+				+below($bp)
+					width: 100%

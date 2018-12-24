@@ -1,0 +1,50 @@
+$bp = 500px
+#assine
+	img
+		margin-right: 20px
+		width: fit-content
+		max-width: 250px
+		height: 100%
+		background-color: $color
+		+below($bp)
+			height: auto
+			width: 200px
+			height: 200px
+			margin: 0 auto 30px
+	section
+		padding: 50px 0
+		+below($bp)
+			padding: 20px 0
+		&.opening
+			padding-top: 100px
+		&:last-child
+			padding-bottom: 100px
+
+	.plans
+		.plan
+			display: flex
+			margin-bottom: 50px
+			&:last-child
+				margin-bottom: 0
+			+below($bp)
+				flex-direction: column
+
+			.plan-inner
+				display: flex
+				flex-direction: column
+			.plan-buttons
+				display: flex
+				justify-content: space-between
+				align-items: stretch
+				+below($bp)
+					margin: 0 5px
+				.subscribe-btn
+					// width: calc(50% - 5px)
+					width: 100%
+					align-self: stretch
+					button
+						height: 100%
+						margin: 0
+
+
+

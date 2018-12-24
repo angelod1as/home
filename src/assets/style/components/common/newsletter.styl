@@ -1,0 +1,37 @@
+.newsletter
+	// set(full)
+	@extend $bg
+	margin: 30px auto
+	padding: 20px
+	border-radius: 5px
+	dropshadow(light)
+	.mc-newsletter
+		margin-top: 20px
+		text-align: left
+		div
+			color: $black !important
+		label
+			display: block
+			text-align: left
+			font-weight: 500
+			font-size: .8em
+			line-height: 1em
+		input[type=email]
+			box-sizing: border-box
+			width: calc((100% / 3) * 2 - 2%)
+			background-color: $white
+			padding: 9px 20px 10px;
+			&::placeholder
+				color: lighten($black, 70%)
+		button
+			border-radius: 0 5px 5px 0
+			box-sizing: border-box
+			width: calc((100% / 3) * 1 - 2%)
+
+.contact
+	.newsletter
+		set(center)
+		background-color: transparent
+		padding: 0
+		border-radius: 0
+		dropshadow(none)

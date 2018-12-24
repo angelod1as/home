@@ -1,0 +1,14 @@
+extend ../layouts/special
+
+append variables
+	- var title= 'Angelo Dias';
+	- var lead= 'Front-end dev and other services';
+	- var description= 'Front-end dev and other services';
+	- var url= 'www.angelodias.com.br';
+	- var share_title= title + '-' + lead;
+	- var share_type= 'article';
+	- var share_image= url + 'others/social.jpg';
+	- var share_description= description || lead;
+
+block content
+	#app

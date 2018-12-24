@@ -1,0 +1,76 @@
+$offset = 0
+$left = 49% - $offset
+$right = 49% + $offset
+
+#subscribe
+	@extend $bg
+	set(full)
+	.container
+		set(center)
+		display: flex
+		justify-content: space-between
+		.aside
+			width: "calc(%s - 10px)" % $left
+		.main
+			width: "calc(%s + 10px)" % $right
+		.aside
+			img
+				max-width: 100%
+				dropshadow(hard)
+		h2
+			margin: 0
+		.main
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+		.secondary
+			display: flex
+			justify-content: space-between
+			.left
+			.right
+				width: calc(45% - 10px)
+				button
+					margin-bottom: 0
+					width: 100%
+
++below(800px)
+	#subscribe
+		.container
+			.aside
+				width: calc(35% + 30px);
+				margin-left: 10px
+			.main
+				width: calc(65% + 10px);
+				margin: 0 10px 0 20px
+				.principal
+					margin-bottom: 30px
+				.secondary
+					display: block
+					.left
+						width: 100%
+						margin-bottom: 30px
+					.right
+						width: 100%
+
++below(500px)
+	#subscribe
+		.container
+			display: block
+			.aside
+				width: auto
+				max-width: 200px
+				margin: 0 auto 30px auto
+			.main
+				margin: 0 10px
+				width: auto
+				h2
+					margin-bottom: 20px
+				.principal
+					margin-bottom: 30px
+				.secondary
+					display: block
+					.left
+						width: auto
+						margin-bottom: 30px
+					.right
+						width: auto

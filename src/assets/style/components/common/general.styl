@@ -1,0 +1,133 @@
+html
+body
+	font-family: 'Merriweather', serif
+	width: 100%
+	margin:0
+	padding:0
+	height:100%
+	font-size: $f-size
+	line-height: $l-height
+	-webkit-font-smoothing antialiased
+
+body *
+	-webkit-font-smoothing antialiased
+
+main
+#app
+#app-inner
+#app-outer
+	height: 100%
+
+#app
+	min-height: 100%
+	position: relative
+
+#app-inner
+	display: grid
+	grid-template-rows: auto 1fr auto
+
+// typography
+a
+	@extend $a
+
+.a-bg
+	color: $white
+
+p
+	text-align: left
+	color: $black
+	margin-bottom: 10px
+	font-weight: $f-light
+
+ul, li
+	text-align: left
+	color: $black
+	font-weight: $f-light
+
+h1
+	line-height: 1.2em
+	margin: 0 0 20px 0
+	font-size: 2em
+
+h2
+	font-size: 1.5em
+	text-transform: uppercase
+	text-align: left
+	font-weight: $f-heavy
+	margin: 0 0 20px 0
+	color: $color
+	line-height: 1.3em
+
+h3
+	font-size: 1.2em
+	font-weight: $f-medium
+	color: $color
+
+
+p + h2
+	margin-top: 30px
+
+blockquote
+	margin: 30px 0
+	font-style: italic
+	border-left: 5px solid $color
+	padding-left: 30px
+
+figure
+img
+	display block
+
+// General
+section
+	padding: 50px 0
+
+.container
+	max-width: $container
+	margin: 0 auto
+	width: 100%
+	p, h1, h2, h3, h4, figcaption, blockquote
+		+below(500px)
+			margin-left: 5px
+			margin-right: 5px
+
+.opening
+	padding-top: 100px
+
+// Buttons
+button
+input[type="submit"]
+	border-radius: 5px
+	width: 100%
+	cursor: pointer
+	font-family: $f-sans
+	font-weight: $f-regular
+	text-transform: uppercase
+	transition: .1s ease
+	margin: 10px 0 0 0
+	background-color: $color
+	padding: 10px 20px
+	color: $white
+	box-shadow: - 0px 0px 0px -0px $black;
+	&:hover
+		transform: translate($shadowNum, - $shadowNum)
+		box-shadow: - $shadowNum $shadowNum 0px -0px $black;
+	&.btn-big
+		padding: 20px 30px
+		width: 100%
+	&.invert
+		background-color: $white
+		color: $color
+		border: 1px solid $color
+
+// Store
+.currency
+	font-size: .7em
+	color: $gray
+
++below(600px)
+	button
+		width: 100%
+
++below(500px)
+	section
+		padding: 100px 0

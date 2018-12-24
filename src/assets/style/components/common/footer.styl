@@ -1,0 +1,73 @@
+#footer
+	set(full)
+	padding: 50px 0 0 0
+	@extend $bg
+	background-color: darken($black, 50%)
+	z-index: -1
+	.footer_inner
+		set(center)
+		display: flex
+		justify-content: center
+		margin-bottom: 30px
+
+		.logo
+			margin-right: 40px
+			width: 115px
+			height: auto
+			.horizontal
+				display: none
+			.vertical
+				display: block
+			svg
+				fill: $white
+
+		h2
+			margin-bottom: 10px
+		h3
+			margin 20px 0 10px 0
+
+		.newsletter
+			width: 100%
+			.mc-newsletter
+				border-radius: 0
+				margin-top: 0
+
+		.social
+			.social-inner
+				display: flex
+				margin-top: 10px
+			a
+				margin-right: 10px
+				img
+					position: relative
+					filter: invert(100%)
+					width: 30px
+					height: 30px
+					transition: .1s ease
+					dropshadow(none)
+					&:hover
+						transform: translate($shadowNum, - $shadowNum)
+						opacity: .7
+
+	.footer_bottom
+		padding: 3px 0
+		background-color: #000
+		font-size: .8em
+		font-weight: $f-regular
+		text-align: center
+		font-family: $f-sans
+
++below(500px)
+	#footer
+		.footer_inner
+			display: block
+			.logo
+				max-width: 300px
+				width: 90%
+				margin: 0 auto 30px
+				.horizontal
+					display: block
+				.vertical
+					display: none
+			.contact
+				margin: 0 10px

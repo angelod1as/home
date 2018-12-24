@@ -1,0 +1,93 @@
+nav
+	position fixed
+	right 0
+	top 0
+	z-index 10
+// copied css shhhhh
+a
+	text-decoration none
+	color $color
+	transition color .3s ease
+	font-style: normal
+	&:hover
+		color $gray
+
+#menuToggle
+	font-family: $f-sans
+	display block
+	position relative
+	top 50px
+	right 50px
+	z-index 1
+	user-select none
+	.nav-bg
+		background-color: $color
+		width: 50px
+		height: 45px
+		position: absolute
+		top -11px
+		left -8px
+		border-radius: 5px
+		z-index: -1
+	input
+		display block
+		width 40px
+		height 32px
+		position absolute
+		top -7px
+		left -5px
+		cursor pointer
+		opacity 0
+		z-index 2
+		-webkit-touch-callout none
+		&:checked
+			& ~ span
+				opacity 1
+				transform rotate(45deg) translate(-2px, -1px)
+				background $color
+				&:nth-last-child(3)
+					opacity 0
+					transform rotate(0deg) scale(.2, .2)
+				&:nth-last-child(2)
+					transform rotate(-45deg) translate(0, -1px)
+			& ~ ul
+				transform none
+	span
+		display block
+		width 33px
+		height 4px
+		margin-bottom 5px
+		position relative
+		background $white
+		// border-radius 3px
+		z-index 1
+		transform-origin 4px 0
+		transition transform 0.5s cubic-bezier(.77,.2,.05,1.0),
+			background .5s cubic-bezier(.77,.2,.05,1.0),
+			opacity .55s ease
+		&:first-child
+			transform-origin 0% 0%
+		&:nth-last-child(2)
+			transform-origin 0% 100%
+
+#menu
+	position absolute
+	width: 300px
+	margin -100px 0 0 -317px
+	padding 50px
+	padding-top 125px
+	background $white
+	list-style-type none
+	-webkit-font-smoothing antialiased
+	transform-origin 0% 0%
+	transform translate(0, -100%)
+	transition transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+	li
+		padding 10px 0
+		font-size 22px
+		text-align: right
+
+.tick
+	text-decoration: line-through
+	color: $gray
+	cursor: not-allowed

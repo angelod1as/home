@@ -1,0 +1,68 @@
+
+block variables
+	- var months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+	- var ENV = (process.env.NODE_EV === 'production' || process.env.NODE_EV === 'staging') ? process.env.NODE_EV : 'development';
+
+doctype html
+html(lang="pt-br")
+	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#")
+		include ../includes/analytics.pug
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+		title Angelo Dias
+		meta(name="application-name" content="Angelo Dias")
+		meta(name="description" content="Front-end dev and other services")
+		link(rel="author" href="http://www.angelodias.com.br/others/humans.txt")
+		//- FAVICON
+		link(rel='apple-touch-icon-precomposed' sizes='57x57' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-57x57.png')
+		link(rel='apple-touch-icon-precomposed' sizes='114x114' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-114x114.png')
+		link(rel='apple-touch-icon-precomposed' sizes='72x72' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon-precomposed' sizes='144x144' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-144x144.png')
+		link(rel='apple-touch-icon-precomposed' sizes='60x60' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-60x60.png')
+		link(rel='apple-touch-icon-precomposed' sizes='120x120' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-120x120.png')
+		link(rel='apple-touch-icon-precomposed' sizes='76x76' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-76x76.png')
+		link(rel='apple-touch-icon-precomposed' sizes='152x152' href='http://www.angelodias.com.br/images/favicon/apple-touch-icon-152x152.png')
+		link(rel='icon' type='image/png' href='http://www.angelodias.com.br/images/favicon/favicon-196x196.png' sizes='196x196')
+		link(rel='icon' type='image/png' href='http://www.angelodias.com.br/images/favicon/favicon-96x96.png' sizes='96x96')
+		link(rel='icon' type='image/png' href='http://www.angelodias.com.br/images/favicon/favicon-32x32.png' sizes='32x32')
+		link(rel='icon' type='image/png' href='http://www.angelodias.com.br/images/favicon/favicon-16x16.png' sizes='16x16')
+		link(rel='icon' type='image/png' href='http://www.angelodias.com.br/images/favicon/favicon-128.png' sizes='128x128')
+		meta(name='application-name' content=' ')
+		meta(name='msapplication-TileColor' content='#FFFFFF')
+		meta(name='msapplication-TileImage' content='http://www.angelodias.com.br/images/favicon/mstile-144x144.png')
+		meta(name='msapplication-square70x70logo' content='http://www.angelodias.com.br/images/favicon/mstile-70x70.png')
+		meta(name='msapplication-square150x150logo' content='http://www.angelodias.com.br/images/favicon/mstile-150x150.png')
+		meta(name='msapplication-wide310x150logo' content='http://www.angelodias.com.br/images/favicon/mstile-310x150.png')
+		meta(name='msapplication-square310x310logo' content='http://www.angelodias.com.br/images/favicon/mstile-310x310.png')
+		//- END FAVICON
+		// Schema.org markup for Google+
+		meta(itemprop='name', content='Angelo Dias')
+		meta(itemprop='description', content='Angelo Dias - Front-end dev and other services')
+		meta(itemprop='image', content='http://www.angelodias.com.br/others/social.jpg')
+		// Twitter Card data
+		meta(name='twitter:card', content='summary_large_image')
+		meta(name='twitter:site', content='@_cronofobico')
+		meta(name='twitter:title', content='Angelo Dias')
+		meta(name='twitter:description', content='Angelo Dias - Front-end dev and other services')
+		meta(name='twitter:creator', content='@_cronofobico')
+		// Twitter summary card with large image must be at least 280x150px
+		meta(name='twitter:image:src', content='http://www.angelodias.com.br/others/social.jpg')
+		// Open Graph data
+		meta(property='og:title', content='Angelo Dias')
+		meta(property='og:type', content='article')
+		meta(property='og:url', content='http://www.angelodias.com.br/')
+		meta(property='og:image', content='http://angelodias.com.br/others/social.jpg')
+		meta(property='og:description', content='Angelo Dias - Front-end dev and other services')
+		meta(property='og:site_name', content='Angelo Dias')
+		meta(property='article:published_time', content='2018-05-25T12:12:00+03:00')
+		meta(property='article:modified_time', content='2018-05-25T12:12:00+03:00')
+		meta(property='article:section', content='Angelo Dias')
+		meta(property='article:tag', content='Angelo Dias')
+		// MAILCHIMP
+		link(href='//cdn-images.mailchimp.com/embedcode/classic-10_7.css', rel='stylesheet', type='text/css')
+
+	body
+		include ../includes/analytics-tag.pug
+		main
+			block content

@@ -1,0 +1,21 @@
+ENGLISH
+
+This website was designed and developed entirely by Angelo Dias using Visual Studio Code.
+
+It was written in React. The HTML that isn't JSX was written using Pug. The CSS is Stylus from head to toe. A nice webpack boilerplate did it's magic and spit what you can see in the URL.
+
+I thank Pilker, Rubens Fernandes, Thiago Almeida and Lucas Golino for the boilerplate, feedback and patience.
+
+You can contact me at angelo[at]angelodias.com.br
+
+===
+
+PORTUGUESE
+
+Esse site foi desenhado e desenvolvido completamente por Angelo Dias no Visual Studio Code.
+
+Ele foi escrito em React. O HTML que não é JSX foi feito em Pug. O CSS é Stylus do começo ao fim. Um belo boilerplate com webpack fez sua magia e cuspiu o que você vê na sua tela agora.
+
+Agradeço Pilker, Rubens Fernandes, Thiago Almeida e Lucas Golino pelo boilerplate, feedbacks e paciência
+
+Você pode me contatar em angelo[arroba]angelodias.com.br
