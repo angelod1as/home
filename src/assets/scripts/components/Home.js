@@ -14,7 +14,6 @@ class Home extends Component {
 
 // Home.propTypes = {
 // 	lastEd: PropTypes.object.isRequired,
-// 	storeOn: PropTypes.bool.isRequired,
 // 	video: PropTypes.string.isRequired,
 // };
 

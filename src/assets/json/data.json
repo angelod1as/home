@@ -1,1 +1,9 @@
-data()
+data({
+	"links": [
+		["", "Home"],
+		["sobre", "Sobre"],
+		["newsletter", "Newsletter"],
+	],
+	"info": {
+	},
+})

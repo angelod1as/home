@@ -7,7 +7,6 @@ import { Link, withRouter } from 'react-router-dom';
 
 class Header extends Component {
 	render() {
-
 		return (
 			<header id="header">
 				<h1>Header</h1>
@@ -19,7 +18,6 @@ class Header extends Component {
 // Header.propTypes = {
 // 	location: PropTypes.object.isRequired,
 // 	lastEd: PropTypes.object.isRequired,
-// 	storeOn: PropTypes.bool.isRequired,
 // };
 
 export default withRouter(Header);

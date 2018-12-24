@@ -5,8 +5,6 @@ import React, { Component } from 'react';
 
 class About extends Component {
 	render() {
-		const { server } = this.props;
-
 		return (
 			<div id="about">
 				<h1>Sobre</h1>

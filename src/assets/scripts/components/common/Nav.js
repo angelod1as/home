@@ -17,7 +17,7 @@ class Nav extends Component {
 	}
 
 	render() {
-		const { links, location, storeOn } = this.props;
+		const { links, location } = this.props;
 		const { checked } = this.state;
 		const { pathname } = location;
 
@@ -38,9 +38,6 @@ class Nav extends Component {
 					<span />
 					<ul id="menu">
 						{links.map((link) => {
-							if (link[0] === 'loja' && !storeOn) {
-								return null;
-							}
 							if (pathname !== `/${link[0]}`) {
 								return <li key={uuidv1()}><Link to={`/${link[0]}`} onClick={this.unCheck}>{link[1]}</Link></li>;
 							}
@@ -55,7 +52,6 @@ class Nav extends Component {
 Nav.propTypes = {
 	location: PropTypes.object.isRequired,
 	links: PropTypes.array.isRequired,
-	storeOn: PropTypes.bool.isRequired,
 };
 
 export default withRouter(Nav);
